@@ -7,7 +7,7 @@
     "front-matter": "^2.1.2"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^5.12.1",
     "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-prettier": "^3.0.1",
     "husky": "^1.3.1",
@@ -25,7 +25,9 @@
     "url": "https://github.com/sasaplus1/stylelint-processor-ignore-front-matter.git"
   },
   "scripts": {
+    "fix": "eslint --fix .",
     "fixpack": "npx fixpack",
-    "lint": "eslint ./index.js"
+    "lint": "eslint .",
+    "precommit": "lint-staged"
   }
 }
