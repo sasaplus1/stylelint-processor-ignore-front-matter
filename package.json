@@ -1,7 +1,7 @@
 {
   "name": "stylelint-processor-ignore-front-matter",
   "description": "stylelint processor for ignore front matter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "dependencies": {
     "front-matter": "^2.1.2"
