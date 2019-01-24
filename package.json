@@ -23,6 +23,9 @@
     "stylelint-config-recommended": "^2.1.0",
     "tmp": "0.0.33"
   },
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "stylelint-processor"
   ],
