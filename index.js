@@ -1,31 +1,31 @@
-'use strict';
-
 const frontMatter = require('front-matter');
 
 module.exports = function() {
-  const newlines = {};
+  const newLines = {};
 
   return {
     code(input, filepath) {
       if (!frontMatter.test(input)) {
-        newlines[filepath] = 0;
-
         return input;
       }
 
-      const content = frontMatter(input);
-      const body = content.body;
+      const { body } = frontMatter(input);
 
       const newlineMatcher = /\r?\n/g;
 
-      newlines[filepath] =
-        input.match(newlineMatcher).length - body.match(newlineMatcher).length;
+      const inputMatchResult = input.match(newlineMatcher) || { length: 0 };
+      const inputLines = inputMatchResult.length;
+
+      const bodyMatchResult = body.match(newlineMatcher) || { length: 0 };
+      const bodyLines = bodyMatchResult.length;
+
+      newLines[filepath] = inputLines - bodyLines;
 
       return body;
     },
     result(stylelintResult, filepath) {
       stylelintResult.warnings.forEach(function(warning) {
-        warning.line += newlines[filepath];
+        warning.line += newLines[filepath] || 0;
       });
 
       return stylelintResult;
