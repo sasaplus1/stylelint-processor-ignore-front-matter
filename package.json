@@ -7,8 +7,7 @@
     "front-matter": "^2.1.2"
   },
   "devDependencies": {
-    "eslint": "^3.16.0",
-    "fixpack": "^2.3.1"
+    "eslint": "^3.16.0"
   },
   "keywords": [
     "stylelint-processor"
@@ -21,7 +20,7 @@
     "url": "https://github.com/sasaplus1/stylelint-processor-ignore-front-matter.git"
   },
   "scripts": {
-    "fixpack": "fixpack",
+    "fixpack": "npx fixpack",
     "lint": "eslint ./index.js"
   }
 }
