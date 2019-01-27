@@ -10,7 +10,7 @@ useful for [Sass in Jekyll](https://jekyllrb.com/docs/assets/).
 
 ## Installation
 
-```sh
+```console
 $ npm install stylelint-processor-ignore-front-matter
 ```
 
