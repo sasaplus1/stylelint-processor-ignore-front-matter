@@ -20,7 +20,7 @@
     "power-assert": "1.6.1",
     "prettier": "1.16.4",
     "stylelint": "9.10.1",
-    "tmp": "0.0.33"
+    "tmp": "0.1.0"
   },
   "files": [
     "index.js"
