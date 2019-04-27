@@ -18,7 +18,7 @@
     "lodash.get": "4.4.2",
     "mocha": "6.1.4",
     "power-assert": "1.6.1",
-    "prettier": "1.16.4",
+    "prettier": "1.17.0",
     "stylelint": "9.10.1",
     "tmp": "0.1.0"
   },
