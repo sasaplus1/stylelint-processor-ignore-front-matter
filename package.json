@@ -14,7 +14,7 @@
     "eslint-config-prettier": "4.2.0",
     "eslint-plugin-prettier": "3.0.1",
     "husky": "2.1.0",
-    "lint-staged": "8.1.6",
+    "lint-staged": "8.1.7",
     "lodash.get": "4.4.2",
     "mocha": "6.1.4",
     "power-assert": "1.6.1",
