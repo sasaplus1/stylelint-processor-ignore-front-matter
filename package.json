@@ -16,7 +16,7 @@
     "husky": "2.7.0",
     "lint-staged": "8.2.1",
     "lodash.get": "4.4.2",
-    "mocha": "6.1.4",
+    "mocha": "6.2.0",
     "power-assert": "1.6.1",
     "prettier": "1.18.2",
     "stylelint": "10.1.0",
