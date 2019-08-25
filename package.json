@@ -40,7 +40,6 @@
     "fixpack": "npx fixpack",
     "lint": "eslint .",
     "mocha": "BABEL_ENV=test mocha --require @babel/register",
-    "precommit": "lint-staged",
     "test": "npm run lint && npm run mocha"
   }
 }
