@@ -19,7 +19,7 @@
     "mocha": "6.1.4",
     "power-assert": "1.6.1",
     "prettier": "1.18.2",
-    "stylelint": "10.0.1",
+    "stylelint": "10.1.0",
     "tmp": "0.1.0"
   },
   "files": [
