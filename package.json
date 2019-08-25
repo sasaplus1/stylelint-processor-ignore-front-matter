@@ -40,7 +40,6 @@
     "fix": "eslint --cache --fix .",
     "fixpack": "npx fixpack",
     "lint": "eslint --cache .",
-    "mocha": "mocha",
-    "test": "npm run lint && npm run mocha"
+    "test": "mocha"
   }
 }
