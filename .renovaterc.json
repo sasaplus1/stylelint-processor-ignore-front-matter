@@ -3,12 +3,11 @@
     "config:base",
     ":automergePatch",
     ":label(renovate)",
-    ":timezone(Asia/Tokyo)"
-  ],
-  "packageRules": [
-    {
-      "extends": "monorepo:babel",
-      "groupName": "babel monorepo"
-    }
+    ":preserveSemverRanges",
+    ":timezone(Asia/Tokyo)",
+    "group:definitelyTyped",
+    "group:jsUnitTest",
+    "group:linters",
+    "group:postcss"
   ]
 }
