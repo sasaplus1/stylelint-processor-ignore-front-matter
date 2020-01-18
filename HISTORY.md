@@ -1,3 +1,7 @@
+# 1.0.1 / 2020-01-18
+
+- update dependencies
+
 # 1.0.0 / 2019-01-24
 
 - modernize
