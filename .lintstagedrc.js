@@ -9,5 +9,5 @@ module.exports = {
     'npx prettier --parser json-stringify --write',
     'git diff --exit-code --quiet'
   ],
-  'package-lock.json': 'node -e "process.exit(1);"'
+  'package-lock.json': 'node -e "process.exitCode = 1;"'
 };
