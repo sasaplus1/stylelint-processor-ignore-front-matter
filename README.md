@@ -22,6 +22,16 @@ $ npm install stylelint-processor-ignore-front-matter
 $ yarn add stylelint-processor-ignore-front-matter
 ```
 
+## How to use
+
+add to [stylelint config](https://stylelint.io/user-guide/configure) the following:
+
+```json
+{
+  "processors": "stylelint-processor-ignore-front-matter"
+}
+```
+
 ## License
 
 The MIT license.
