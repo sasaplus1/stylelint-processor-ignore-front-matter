@@ -1,6 +1,6 @@
 const frontMatter = require('front-matter');
 
-module.exports = function() {
+module.exports = function () {
   const newLines = {};
 
   return {
@@ -24,7 +24,7 @@ module.exports = function() {
       return body;
     },
     result(stylelintResult, filepath) {
-      stylelintResult.warnings.forEach(function(warning) {
+      stylelintResult.warnings.forEach(function (warning) {
         warning.line += newLines[filepath] || 0;
       });
 
