@@ -32,37 +32,37 @@ async function createFile(text) {
   return file;
 }
 
-describe('index.js', function() {
+describe('index.js', function () {
   let pattern = 1;
 
-  it("don't throw an error", async function() {
+  it("don't throw an error", async function () {
     const file = await createFile(['---', '---'].join('\n'));
     const { errored } = await lint(file);
 
     assert(errored === false);
   });
-  it(`pattern ${pattern++}`, async function() {
+  it(`pattern ${pattern++}`, async function () {
     const file = await createFile(['---', '---', 'body {}'].join('\n'));
     const result = await lint(file);
     const warning = get(result, 'results[0].warnings[0]');
 
     assert(warning.line === 3);
   });
-  it(`pattern ${pattern++}`, async function() {
+  it(`pattern ${pattern++}`, async function () {
     const file = await createFile(['---', '---', 'body {}', ''].join('\n'));
     const result = await lint(file);
     const warning = get(result, 'results[0].warnings[0]');
 
     assert(warning.line === 3);
   });
-  it(`pattern ${pattern++}`, async function() {
+  it(`pattern ${pattern++}`, async function () {
     const file = await createFile(['---', '---', '', 'body {}'].join('\n'));
     const result = await lint(file);
     const warning = get(result, 'results[0].warnings[0]');
 
     assert(warning.line === 4);
   });
-  it(`pattern ${pattern++}`, async function() {
+  it(`pattern ${pattern++}`, async function () {
     const file = await createFile(['---', '', '---', '', 'body {}'].join('\n'));
     const result = await lint(file);
     const warning = get(result, 'results[0].warnings[0]');
