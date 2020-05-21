@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "author": "sasa+1 <sasaplus1@gmail.com>",
   "dependencies": {
-    "front-matter": "^3.0.0"
+    "front-matter": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
