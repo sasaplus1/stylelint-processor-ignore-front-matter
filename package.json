@@ -15,7 +15,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^6.0.0",
-    "lint-staged": "^10.0.0",
+    "lint-staged": "^11.0.0",
     "lodash.get": "^4.4.2",
     "mocha": "^8.0.0",
     "power-assert": "^1.6.1",
