@@ -1,13 +1,9 @@
 module.exports = {
-  '*.js': 'npx eslint',
-  '*.yml': [
-    'npx prettier --parser yaml --write',
-    'git diff --exit-code --quiet'
-  ],
+  '*.js': ['eslint --cache', 'prettier --check'],
+  '*.yml': 'prettier --check',
   'package.json': [
-    'npx fixpack',
-    'npx prettier --parser json-stringify --write',
-    'git diff --exit-code --quiet'
+    'npx fixpack --dryRun',
+    'prettier --check --parser json-stringify'
   ],
   'package-lock.json': 'node -e "process.exitCode = 1;"'
 };
