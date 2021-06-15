@@ -40,7 +40,7 @@
     "url": "https://github.com/sasaplus1/stylelint-processor-ignore-front-matter.git"
   },
   "scripts": {
-    "fix": "eslint --cache --fix .",
+    "fix": "eslint --fix .",
     "fixpack": "npx fixpack",
     "lint": "eslint --cache .",
     "test": "mocha"
