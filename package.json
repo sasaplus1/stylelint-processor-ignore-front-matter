@@ -43,6 +43,7 @@
     "fix": "eslint --fix .",
     "fixpack": "npx fixpack",
     "lint": "eslint --cache .",
+    "prepare": "[ -n \"$CI\" ] || husky install",
     "test": "mocha"
   }
 }
