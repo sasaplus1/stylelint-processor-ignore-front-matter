@@ -10,7 +10,7 @@
     "@babel/core": "^7.5.5",
     "@babel/register": "^7.5.5",
     "babel-preset-power-assert": "^3.0.0",
-    "eslint": "^7.0.0",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-node": "^11.0.0",
     "husky": "^7.0.0",
