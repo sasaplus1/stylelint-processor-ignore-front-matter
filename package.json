@@ -39,7 +39,7 @@
     "fix": "eslint --fix . && prettier --write './**/*.js'",
     "fixpack": "npx fixpack",
     "lint": "eslint --cache . && prettier --check './**/*.js'",
-    "prepare": "[ -n \"$CI\" ] || husky install",
+    "prepare": "is-ci || husky install",
     "test": "mocha"
   }
 }
