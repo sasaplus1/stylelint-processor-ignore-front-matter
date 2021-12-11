@@ -1,24 +1,31 @@
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
-const util = require('util');
 
 const get = require('lodash.get');
 const stylelint = require('stylelint');
 const tmp = require('tmp');
 
-const tempFile = util.promisify(tmp.file);
-const writeFile = util.promisify(fs.writeFile);
-
-async function createFile(text) {
-  const file = await tempFile({ postfix: '.css' });
-
-  await writeFile(file, text, 'utf8');
-
-  return file;
-}
-
 describe('index.js', function () {
+  function createFile(text) {
+    return new Promise(function (resolve, reject) {
+      tmp.file(function (err, name) {
+        if (err) {
+          reject(err);
+          return;
+        }
+
+        fs.writeFile(name, text, 'utf8', function (err) {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve(name);
+        });
+      });
+    });
+  }
+
   const options = {
     config: {
       processors: path.resolve(__dirname, '../index.js'),
@@ -30,7 +37,6 @@ describe('index.js', function () {
 
   it("don't throw an error", async function () {
     const file = await createFile(['---', '---'].join('\n'));
-
     const { errored } = await stylelint.lint({
       ...options,
       files: file
