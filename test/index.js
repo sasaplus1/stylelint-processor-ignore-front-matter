@@ -1,6 +1,5 @@
 const assert = require('assert');
 const fs = require('fs');
-const path = require('path');
 
 const get = require('lodash.get');
 const stylelint = require('stylelint');
@@ -28,7 +27,7 @@ describe('index.js', function () {
 
   const options = {
     config: {
-      processors: path.resolve(__dirname, '../index.js'),
+      processors: require.resolve('../index.js'),
       rules: {
         'block-no-empty': true
       }
