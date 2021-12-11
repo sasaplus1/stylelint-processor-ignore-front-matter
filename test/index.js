@@ -19,6 +19,7 @@ describe('index.js', function () {
             reject(err);
             return;
           }
+
           resolve(name);
         });
       });
