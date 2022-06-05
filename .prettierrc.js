@@ -1,4 +1,12 @@
 module.exports = {
   singleQuote: true,
-  trailingComma: 'none'
+  trailingComma: 'none',
+  overrides: [
+    {
+      files: '*.json',
+      options: {
+        parser: 'json-stringify'
+      }
+    }
+  ]
 };
