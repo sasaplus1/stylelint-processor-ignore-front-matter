@@ -28,7 +28,7 @@ describe('index.js', function () {
 
   const options = {
     config: {
-      processors: require.resolve('../index.js'),
+      processors: require.resolve('.'),
       rules: {
         'block-no-empty': true
       }

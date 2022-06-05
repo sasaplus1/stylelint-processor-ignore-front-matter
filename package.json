@@ -40,6 +40,6 @@
     "fixpack": "npx fixpack",
     "lint": "eslint --cache . && prettier --check './**/*.js'",
     "prepare": "is-ci || husky install",
-    "test": "mocha"
+    "test": "mocha index.test.js"
   }
 }
