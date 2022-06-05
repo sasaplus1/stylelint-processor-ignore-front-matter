@@ -36,9 +36,9 @@
     "url": "https://github.com/sasaplus1/stylelint-processor-ignore-front-matter.git"
   },
   "scripts": {
-    "fix": "eslint --fix . && prettier --write './**/*.js'",
+    "fix": "eslint --fix . && prettier --write .",
     "fixpack": "npx fixpack",
-    "lint": "eslint --cache . && prettier --check './**/*.js'",
+    "lint": "eslint . && prettier --check .",
     "prepare": "is-ci || husky install",
     "test": "mocha index.test.js"
   }
