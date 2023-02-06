@@ -29,7 +29,31 @@
     "stylelint-processor"
   ],
   "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.+(md|yml)": "prettier --check",
+    "!(package|package-lock).json": "prettier --check",
+    "package.json": [
+      "npx fixpack --dryRun",
+      "prettier --check"
+    ]
+  },
   "main": "./index.js",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": "*.json",
+        "options": {
+          "parser": "json-stringify"
+        }
+      }
+    ]
+  },
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
