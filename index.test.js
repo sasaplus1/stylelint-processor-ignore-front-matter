@@ -42,7 +42,7 @@ describe('index.js', function () {
       files: file
     });
 
-    assert(errored === false);
+    assert.strictEqual(errored, false);
   });
   it('has not EOL', async function () {
     const file = await createFile(['---', '---', 'body {}'].join('\n'));
@@ -52,7 +52,7 @@ describe('index.js', function () {
     });
     const warning = get(result, 'results[0].warnings[0]');
 
-    assert(warning.line === 3);
+    assert.strictEqual(warning.line, 3);
   });
   it('has EOL', async function () {
     const file = await createFile(['---', '---', 'body {}', ''].join('\n'));
@@ -62,7 +62,7 @@ describe('index.js', function () {
     });
     const warning = get(result, 'results[0].warnings[0]');
 
-    assert(warning.line === 3);
+    assert.strictEqual(warning.line, 3);
   });
   it('LF before selector', async function () {
     const file = await createFile(['---', '---', '', 'body {}'].join('\n'));
@@ -72,7 +72,7 @@ describe('index.js', function () {
     });
     const warning = get(result, 'results[0].warnings[0]');
 
-    assert(warning.line === 4);
+    assert.strictEqual(warning.line, 4);
   });
   it('has Front-matter', async function () {
     const file = await createFile(['---', '', '---', '', 'body {}'].join('\n'));
@@ -82,6 +82,6 @@ describe('index.js', function () {
     });
     const warning = get(result, 'results[0].warnings[0]');
 
-    assert(warning.line === 5);
+    assert.strictEqual(warning.line, 5);
   });
 });
