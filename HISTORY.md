@@ -1,3 +1,10 @@
+# 1.0.5 / 2023-06-04
+
+- update dependencies
+- EOL
+  - https://stylelint.io/migration-guide/to-15#removed-processors-configuration-property
+  - https://github.com/stylelint/stylelint/pull/6479
+
 # 1.0.4 / 2023-02-06
 
 - update dependencies
