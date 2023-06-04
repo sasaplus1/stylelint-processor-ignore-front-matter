@@ -22,6 +22,31 @@
   "engines": {
     "node": ">=10"
   },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+      "prettier"
+    ],
+    "overrides": [
+      {
+        "env": {
+          "mocha": true
+        },
+        "files": [
+          "*.test.js"
+        ]
+      }
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "root": true
+  },
   "files": [
     "index.js"
   ],
